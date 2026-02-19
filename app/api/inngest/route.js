@@ -3,7 +3,8 @@ import {
   inngest, 
   syncUserCreation, 
   syncUserUpdation, 
-  syncUserDeletion 
+  syncUserDeletion ,
+  createUserOrder
 } from "@/config/inngest";
 
 // This prevents the "Failed to collect page data" error
@@ -14,6 +15,7 @@ export const { GET, POST, PUT } = serve({
   functions: [
     syncUserCreation, 
     syncUserUpdation, 
-    syncUserDeletion
+    syncUserDeletion,
+    createUserOrder,
   ],
 });
